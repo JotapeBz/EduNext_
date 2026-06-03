@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  --color-brand-green: #00693f;
+  --color-brand-green-hover: #005230;
+  --color-bg-light: #eaf6ef;
+  --color-surface-card: #ffffff;
+  --color-accent-amber: #f89e1b;
+  --color-accent-blue: #3b82f6;
+  --color-accent-red: #ef4444;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-light);
+  min-height: 100vh;
+  margin: 0;
+  color: #1a1c1e;
+}
+
+/* Tactile bouncy buttons styled after the design's "squishy-btn" class */
+.squishy-btn {
+  transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.squishy-btn:active {
+  transform: scale(0.96) translateY(2px);
+  filter: brightness(0.95);
+}
+
+/* Soft progress bar shine */
+.progress-shine {
+  background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+}
+
+/* Custom scrolling classes */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
